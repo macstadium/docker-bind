@@ -7,7 +7,7 @@ RUN apt-get update \
 
 FROM ubuntu:bionic-20190612
 
-LABEL maintainer="sameer@damagehead.com"
+LABEL maintainer="vgonzalez@macstadium.com"
 
 ENV BIND_USER=bind \
     BIND_VERSION=9.11.3 \

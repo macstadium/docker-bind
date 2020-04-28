@@ -49,6 +49,15 @@ create_bind_data_dir() {
   fi
   rm -rf /var/lib/bind
   ln -sf ${BIND_DATA_DIR}/lib /var/lib/bind
+
+  #check if the bind configs directory exists and move all files to the bind directory
+  if [ -d /configs ]; then
+        cp /configs/* /etc/bind/
+  fi
+
+  if [ -d /zones ]; then
+        cp /zones/* /var/lib/bind
+  fi
 }
 
 create_webmin_data_dir() {
